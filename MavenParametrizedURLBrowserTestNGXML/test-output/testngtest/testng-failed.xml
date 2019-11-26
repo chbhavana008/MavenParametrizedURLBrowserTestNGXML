@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [testngtest]" parallel="tests">
+  <listeners>
+    <listener class-name="com.learnautomation.utility.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="2" name="MultiBrowser(failed)" parallel="tests">
+    <classes>
+      <class name="com.learnautomation.testcases.LoginTestfacebook">
+        <methods>
+          <include name="setUpSuite"/>
+          <include name="tearDownMethod"/>
+          <include name="setup"/>
+          <include name="loginApp"/>
+        </methods>
+      </class> <!-- com.learnautomation.testcases.LoginTestfacebook -->
+    </classes>
+  </test> <!-- MultiBrowser(failed) -->
+</suite> <!-- Failed suite [testngtest] -->
