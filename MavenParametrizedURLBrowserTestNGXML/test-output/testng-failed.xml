@@ -6,6 +6,7 @@
       <class name="com.learnautomation.testcases.LoginTestfacebook">
         <methods>
           <include name="setUpSuite"/>
+          <include name="quitbrowser"/>
           <include name="tearDownMethod"/>
           <include name="setup"/>
           <include name="loginApp"/>

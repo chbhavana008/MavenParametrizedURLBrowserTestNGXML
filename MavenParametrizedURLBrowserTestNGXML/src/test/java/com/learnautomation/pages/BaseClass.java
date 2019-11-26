@@ -17,44 +17,39 @@ import com.learnautomation.utility.Helper;
 public class BaseClass {
 
 	public WebDriver driver;
-	
+
 	public ExcelDataProvider excel;
-	
+
 	public ConfigDataProvider config;
-	
-	
+
 	@BeforeSuite
-	public void setUpSuite() throws IOException
-	{
-				
-		excel=new ExcelDataProvider();
-		config=new ConfigDataProvider();
-		
+	public void setUpSuite() throws IOException {
+
+		excel = new ExcelDataProvider();
+		config = new ConfigDataProvider();
+
 	}
-	
+
 	@BeforeClass
-	public void setup() 
-	{	
-		driver=BrowserFactory.startApplication(driver,config.getBrowser(),config.getStagingURL());	
-		Helper.chromeoptions();			
+	public void setup() {
+		driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getStagingURL());
+		Helper.chromeoptions();
 	}
+
 	
-	/*
-	 * @AfterClass public void quitbrowser() {
-	 * 
-	 * BrowserFactory.quitBrowser(driver);
-	 * 
-	 * }
-	 */
-	
+	  @AfterClass public void quitbrowser() {
+	  
+	  BrowserFactory.quitBrowser(driver);
+	  
+	  }
+	 
+
 	@AfterMethod
-	public void tearDownMethod(ITestResult result)
-	{
-		if(result.getStatus()==ITestResult.FAILURE) {
-			
-			
-			System.out.println("screenshot captured");
+	public void tearDownMethod(ITestResult result) {
+		if (result.getStatus() == ITestResult.FAILURE) {
+
+			Helper.captureScreenshot(driver);
 		}
-				
+
 	}
 }
