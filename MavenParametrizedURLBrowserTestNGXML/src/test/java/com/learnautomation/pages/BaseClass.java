@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.learnautomation.utility.BrowserFactory;
 import com.learnautomation.utility.ConfigDataProvider;
@@ -29,11 +30,14 @@ public class BaseClass {
 		config = new ConfigDataProvider();
 
 	}
-
+	
+	@Parameters("browser,URLToBeTested")
 	@BeforeClass
-	public void setup() {
-		driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getStagingURL());
-		Helper.chromeoptions();
+	public void setup(String browser,String URLToBeTested) {
+		//driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getStagingURL());
+		  driver = BrowserFactory.startApplication(driver, browser, URLToBeTested);
+		
+		  Helper.chromeoptions();
 	}
 
 	
