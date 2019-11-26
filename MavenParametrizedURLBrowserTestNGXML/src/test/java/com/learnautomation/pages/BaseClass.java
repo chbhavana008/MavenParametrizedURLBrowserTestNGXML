@@ -31,7 +31,7 @@ public class BaseClass {
 
 	}
 	
-	@Parameters("browser,URLToBeTested")
+	@Parameters({"browser","URLToBeTested"})
 	@BeforeClass
 	public void setup(String browser,String URLToBeTested) {
 		//driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getStagingURL());
