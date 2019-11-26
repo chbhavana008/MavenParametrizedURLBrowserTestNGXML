@@ -1,0 +1,2 @@
+# MavenParametrizedURLBrowserTestNGXML
+MultiBorwser
