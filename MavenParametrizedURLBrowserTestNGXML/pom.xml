@@ -38,7 +38,7 @@
 						<version>3.0.0-M3</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>${xmlfiles}</suiteXmlFile>
+								<suiteXmlFile>XMLFiles/${xmlfiles}</suiteXmlFile>
 							</suiteXmlFiles>
 
 							<systemPropertyVariables>
