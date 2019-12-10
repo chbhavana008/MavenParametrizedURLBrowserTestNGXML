@@ -27,16 +27,18 @@ public class BaseClass {
 	public void setUpSuite() throws IOException {
 
 		excel = new ExcelDataProvider();
-		config = new ConfigDataProvider();
+		//use this if don't need data from pom.xml parameters 
+		//config = new ConfigDataProvider();
 
 	}
 	
 	@Parameters({"browser","URLToBeTested"})
 	@BeforeClass
 	public void setup(String browser,String URLToBeTested) {
-		//driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getStagingURL());
-		  driver = BrowserFactory.startApplication(driver, browser, URLToBeTested);
+			driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getStagingURL());
+		  //driver = BrowserFactory.startApplication(driver, browser, URLToBeTested);
 		
+		  //to initialize screenshots taking class
 		  Helper.chromeoptions();
 	}
 

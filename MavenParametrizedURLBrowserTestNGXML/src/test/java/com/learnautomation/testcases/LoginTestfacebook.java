@@ -27,6 +27,7 @@ public class LoginTestfacebook extends BaseClass {
 		Assert.assertEquals(driver.getTitle(), "facebook");
 		
 		Helper.captureScreenshot(driver);
+		//Screenshots will be saved in below location if run from jenkins
 				
 		}
 		
