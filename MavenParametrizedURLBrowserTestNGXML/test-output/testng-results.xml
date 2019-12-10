@@ -1,44 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14565" started-at="2019-11-26T05:21:09Z" finished-at="2019-11-26T05:21:23Z">
+  <suite name="Default suite" duration-ms="22" started-at="2019-12-10T19:58:57Z" finished-at="2019-12-10T19:58:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14565" started-at="2019-11-26T05:21:09Z" finished-at="2019-11-26T05:21:23Z">
+    <test name="Default test" duration-ms="22" started-at="2019-12-10T19:58:57Z" finished-at="2019-12-10T19:58:57Z">
       <class name="com.learnautomation.testcases.LoginTestfacebook">
-        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:com.learnautomation.testcases.LoginTestfacebook@ae45eb6]" name="setUpSuite" is-config="true" duration-ms="330" started-at="2019-11-26T05:21:08Z" finished-at="2019-11-26T05:21:09Z">
+        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:com.learnautomation.testcases.LoginTestfacebook@27efef64]" name="setUpSuite" is-config="true" duration-ms="368" started-at="2019-12-10T19:58:56Z" finished-at="2019-12-10T19:58:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpSuite -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.learnautomation.testcases.LoginTestfacebook@ae45eb6]" name="setup" is-config="true" duration-ms="6469" started-at="2019-11-26T05:21:09Z" finished-at="2019-11-26T05:21:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="loginApp()[pri:0, instance:com.learnautomation.testcases.LoginTestfacebook@ae45eb6]" name="loginApp" duration-ms="5676" started-at="2019-11-26T05:21:15Z" finished-at="2019-11-26T05:21:21Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.learnautomation.testcases.LoginTestfacebook@27efef64]" name="setup" is-config="true" duration-ms="0" started-at="2019-12-10T19:58:57Z" finished-at="2019-12-10T19:58:57Z">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[expected [facebook] but found [(4) Facebook]]]>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method setup but has not been marked @Optional or defined
+in C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-683278996\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [facebook] but found [(4) Facebook]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.learnautomation.testcases.LoginTestfacebook.loginApp(LoginTestfacebook.java:27)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method setup but has not been marked @Optional or defined
+in C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-683278996\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -56,22 +47,55 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="SKIP" signature="loginApp()[pri:0, instance:com.learnautomation.testcases.LoginTestfacebook@27efef64]" name="loginApp" duration-ms="0" started-at="2019-12-10T19:58:57Z" finished-at="2019-12-10T19:58:57Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method setup but has not been marked @Optional or defined
+in C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-683278996\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method setup but has not been marked @Optional or defined
+in C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-683278996\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginApp -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.learnautomation.testcases.LoginTestfacebook@ae45eb6]" name="tearDownMethod" is-config="true" duration-ms="1709" started-at="2019-11-26T05:21:21Z" finished-at="2019-11-26T05:21:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=loginApp status=FAILURE method=LoginTestfacebook.loginApp()[pri:0, instance:com.learnautomation.testcases.LoginTestfacebook@ae45eb6] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.learnautomation.testcases.LoginTestfacebook@27efef64]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2019-12-10T19:58:57Z" finished-at="2019-12-10T19:58:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="quitbrowser()[pri:0, instance:com.learnautomation.testcases.LoginTestfacebook@ae45eb6]" name="quitbrowser" is-config="true" duration-ms="696" started-at="2019-11-26T05:21:23Z" finished-at="2019-11-26T05:21:23Z">
+        <test-method status="SKIP" signature="quitbrowser()[pri:0, instance:com.learnautomation.testcases.LoginTestfacebook@27efef64]" name="quitbrowser" is-config="true" duration-ms="0" started-at="2019-12-10T19:58:57Z" finished-at="2019-12-10T19:58:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitbrowser -->
